@@ -358,11 +358,11 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding-top: 100px;
+            padding-top: 140px;
+            padding-bottom: 60px;
             position: relative;
             overflow: hidden;
             background: var(--color-bg-main);
-            color: #000;
         }
 
 
@@ -375,6 +375,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
+            /*transform: translateY(20px); use this if you want to move the hero section content even down*/
         }
 
         .hero-content { z-index: 2; }
@@ -401,8 +402,8 @@
         
         .marquee-track {
             display: inline-flex;
-            gap: 60px;
-            animation: marquee-scroll 30s linear infinite;
+            gap: 40px;
+            animation: marquee-scroll 20s linear infinite;
             align-items: center;
             padding: 0;
         }
@@ -413,11 +414,11 @@
         }
 
         .partner-logo {
-            font-size: 1.8rem;
-            color: rgba(255, 255, 255, 0.35); /* dark tint on gold bg */
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.4); /* dark tint on gold bg */
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             transition: 0.3s;
             cursor: pointer;
             white-space: nowrap;
@@ -742,6 +743,50 @@
             /*color: #f01010;*/
         }
 
+        /* Partner logo scrolling in the hero section*/
+        .hero-marquee {
+            margin-top: 30px;
+            max-width: 500px; /* same as your text width */
+        }
+
+        .marquee-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* LEFT fade */
+        .marquee-container::before,
+        .marquee-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 60px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* left fade */
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, var(--color-bg-main), transparent);
+        }
+
+        /* right fade */
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, var(--color-bg-main), transparent);
+        }
+
+        .partner-label {
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 10px;
+            margin-top: 50px;
+            color: var(--color-gold);
+        }
 
         /* --- MOBILE OPTIMIZATION --- */
         @media (max-width: 1024px) {
@@ -873,6 +918,30 @@
                         <a href="#about" class="btn btn-outline">
                             Learn More
                         </a>
+                    </div>
+
+                    <div class="hero-marquee">
+                        <p class = "partner-label">
+                            Trusted by industry leaders
+                        </p>
+                        <div class="marquee-container">
+                            <div class="marquee-track">
+                                <div class="partner-logo"><i class="fa-solid fa-industry"></i><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-aws"></i><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-google"></i><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-dhl"></i><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-fedex"></i><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-ups"></i><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
+                                <div class="partner-logo"><i class="fa-solid fa-warehouse"></i><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
+                                <div class="partner-logo"><i class="fa-solid fa-industry"></i><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-aws"></i><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-google"></i><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-dhl"></i><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-fedex"></i><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
+                                <div class="partner-logo"><i class="fa-brands fa-ups"></i><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
+                                <div class="partner-logo"><i class="fa-solid fa-warehouse"></i><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 

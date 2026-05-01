@@ -76,7 +76,7 @@
         body {
             font-family: "Aptos", Arial, sans-serif;
             background-color: var(--color-bg-main);
-            color: #ec1010;
+            color: var(--color-text-secondary);
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -250,7 +250,7 @@
 
         .btn:hover {
             background-color: transparent;
-            color: var(--color-green-dark);
+            color: var(--color-text-primary);
             transform: translateY(-3px);
         }
 
@@ -296,7 +296,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 0;
+            padding: 12px 0;
             background: var(--color-bg-main);
             backdrop-filter: blur(10px);
             z-index: 1000;   
@@ -320,14 +320,14 @@
         }
         
         .logo img {
-            height: 40px; 
+            height: 32px; 
             width: auto;
         }
 
         /*Navigation*/
         .nav-links { 
             display: flex; 
-            gap: 35px; 
+            gap: 28px; 
         }
         .nav-links a { 
             font-size: 1.2rem; 
@@ -442,7 +442,7 @@
         .about-text h2 { font-size: 3rem; }
         
         .info-card {
-            background: var(--color-bg-secondary);
+            background: var(--color-bg-main);
             padding: 40px;
             border: 1px solid rgba(255,255,255,0.05);
             margin-bottom: 25px;
@@ -521,8 +521,13 @@
         }
 
         /* --- GALLERY SECTION --- */
-        #gallery { background: var(--color-bg-secondary); }
-        .gallery-header { text-align: center; margin-bottom: 60px; }
+        #gallery { 
+            background: var(--color-bg-main); 
+        }
+        .gallery-header { 
+            text-align: center; 
+            margin-bottom: 60px; 
+        }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -559,9 +564,15 @@
         #cta-banner h2 { color: #fff; margin-bottom: 20px; font-size: 2.5rem; }
         #cta-banner p { color: rgba(255,255,255,0.9); margin-bottom: 30px; font-size: 1.2rem; }
         #cta-banner .btn {
-            background: #fff; color: var(--color-green); border-color: #fff;
+            background: #fff; 
+            color: var(--color-green); 
+            border-color: #fff;
         }
-        #cta-banner .btn:hover { background: #000; color: #fff; border-color: #000; }
+        #cta-banner .btn:hover { 
+            background: #000; 
+            color: #fff; 
+            border-color: #000; 
+        }
 
         /* --- CONTACT SECTION (Base content kept) --- */
         #contact { padding-bottom: 0; }
@@ -593,7 +604,7 @@
         
         /* Request Quote Form */
         .form-box {
-            background: var(--color-bg-secondary);
+            background: #222);
             padding: 40px;
             border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.05);
@@ -788,8 +799,8 @@
             color: var(--color-text-secondary);
         }
 
-        .hero-subtext ventriloc-anim { /*this is not working*/
-            color: var(--color-accent)
+        .hero-subtext { /*this is not working*/
+            color: #d1d1d1
         }
 
         /* --- MOBILE OPTIMIZATION --- */
@@ -821,7 +832,7 @@
                 top: 70px;
                 left: 0;
                 width: 100%;
-                background: var(--color-gold);
+                background: var(--color-green);
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
@@ -899,8 +910,8 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
 
-                <a href="#contact" class="btn btn-cta-nav" style="padding: 10px 24px;">
-                    <i class="fa-solid fa-file-invoice-dollar"></i> Get Quote
+                <a href="#contact" class="btn btn-cta-nav" style="padding: 8px 20px;">
+                    Get Quote
                 </a>
             </nav>
         </div>

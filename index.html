@@ -167,11 +167,11 @@
 
         /* 3. Lusion Cards (Popup Effect) */
         .lusion-card {
-            background: var(--color-bg-secondary);
+            background: var(--color-bg-main);
             padding: 40px 30px;
             text-align: left;
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 2px solid rgba(255,255,255,0.1);
             
             /* Animation Init State */
             opacity: 0;
@@ -180,7 +180,7 @@
         }
 
         .lusion-card:hover {
-            border-color: var(--color-green-dark);
+            border-color: var(--color-gold-soft);
             /* Hover transform handled by transition, but we need to ensure it doesn't conflict with active state too much. 
                The base hover was translateY(-5px). We can keep that if active. */
         }
@@ -781,11 +781,15 @@
         .partner-label {
             font-size: 0.75rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
+            /*text-transform: uppercase;*/
             opacity: 0.6;
             margin-bottom: 10px;
             margin-top: 50px;
-            color: var(--color-gold);
+            color: var(--color-text-secondary);
+        }
+
+        .hero-subtext ventriloc-anim { /*this is not working*/
+            color: var(--color-accent)
         }
 
         /* --- MOBILE OPTIMIZATION --- */
@@ -922,24 +926,31 @@
 
                     <div class="hero-marquee">
                         <p class = "partner-label">
-                            Trusted by industry leaders
+                            Our Partners
                         </p>
                         <div class="marquee-container">
                             <div class="marquee-track">
-                                <div class="partner-logo"><i class="fa-solid fa-industry"></i><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-aws"></i><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-google"></i><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-dhl"></i><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-fedex"></i><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-ups"></i><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
-                                <div class="partner-logo"><i class="fa-solid fa-warehouse"></i><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
-                                <div class="partner-logo"><i class="fa-solid fa-industry"></i><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-aws"></i><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-google"></i><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-dhl"></i><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-fedex"></i><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
-                                <div class="partner-logo"><i class="fa-brands fa-ups"></i><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
-                                <div class="partner-logo"><i class="fa-solid fa-warehouse"></i><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
+                                <div class="partner-logo"><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
+                                <div class="partner-logo"><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
+                                <div class="partner-logo"><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
+                                <div class="partner-logo"><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
+                                <div class="partner-logo"><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
+                                <div class="partner-logo"><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
+                                <div class="partner-logo"><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
+                                <div class="partner-logo"><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
+                                <div class="partner-logo"><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
+                                <div class="partner-logo"><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
+                                <div class="partner-logo"><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
+                                <div class="partner-logo"><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
+                                <div class="partner-logo"><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
+                                <div class="partner-logo"><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
+                                <div class="partner-logo"><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
+                                <div class="partner-logo"><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
+                                <div class="partner-logo"><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
+                                <div class="partner-logo"><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
+                                <div class="partner-logo"><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
+                                <div class="partner-logo"><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
+                                <div class="partner-logo"><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
                             </div>
                         </div>
                     </div>
@@ -949,32 +960,6 @@
                     <img src="new_hero_img_01.png" alt="Industrial Forklift" class="hero-img">
                 </div>
                 
-            </div>
-        </div>
-    </section>
-
-    <section id="partners">
-        <div class="container">
-            <div class="partners-header">
-                <span class="section-label">Trusted By Industry Leaders</span>
-            </div>
-        </div>
-        <div class="marquee-container">
-            <div class="marquee-track">
-                <div class="partner-logo"><i class="fa-solid fa-industry"></i><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-aws"></i><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-google"></i><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-dhl"></i><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-fedex"></i><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-ups"></i><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
-                <div class="partner-logo"><i class="fa-solid fa-warehouse"></i><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
-                <div class="partner-logo"><i class="fa-solid fa-industry"></i><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-aws"></i><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-google"></i><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-dhl"></i><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-fedex"></i><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
-                <div class="partner-logo"><i class="fa-brands fa-ups"></i><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
-                <div class="partner-logo"><i class="fa-solid fa-warehouse"></i><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
             </div>
         </div>
     </section>
@@ -1388,7 +1373,7 @@
             const navbar = document.querySelector("header");
 
             window.addEventListener("scroll", () => {
-                if (window.scrollY > 50) {
+                if (window.scrollY > 30) {
                     navbar.classList.add("scrolled");
                 } else {
                     navbar.classList.remove("scrolled");

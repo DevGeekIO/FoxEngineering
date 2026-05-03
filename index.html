@@ -39,23 +39,23 @@
         /* --- VARIABLES & RESET --- */
         :root {
             /* PRIMARY PALETTE — matching business card */
-            --color-green:        #1a5c32;   /* rich forest green (card bg) */
-            --color-green-dark:   #0f3d20;   /* deeper green for hover/depth */
-            --color-green-light:  #236b3a;   /* slightly lighter for layering */
-            --color-yellow:       #f5c400;   /* strong construction yellow */
-            --color-yellow-soft:  #fdd835;   /* brighter highlight yellow */
-            --color-yellow-dark:  #c9a200;   /* muted gold for borders */
+            --color-green:        #1a5c32;   
+            --color-green-dark:   #0f3d20;   
+            --color-green-light:  #236b3a;  
+            --color-yellow:       #f5c400;   
+            --color-yellow-soft:  #fdd835;   
+            --color-yellow-dark:  #c9a200;   
 
             /* LIGHT THEME BASE */
-            --color-bg-main:      #f2f0eb;   /* warm off-white (matches card light bg) */
-            --color-bg-secondary: #e8e5de;   /* slightly darker warm white */
-            --color-bg-section:   #1a5c32;   /* green sections */
+            --color-bg-main:      #f2f0eb;   
+            --color-bg-secondary: #e8e5de;   
+            --color-bg-section:   #1a5c32;   
             --color-white:        #ffffff;
 
             /* TEXT */
-            --color-text-primary:   #0f3d20;   /* dark green on light bg */
-            --color-text-light:     #ffffff;   /* white on green bg */
-            --color-text-secondary: #3a5a45;   /* medium green-tinted */
+            --color-text-primary:   #0f3d20;   
+            --color-text-light:     #ffffff;   
+            --color-text-secondary: #3a5a45;   
             --color-text-muted:     #7a8a80;
 
             /* CAUTION TAPE */
@@ -135,9 +135,7 @@
             color: var(--color-green);
         }
 
-        /* =====================================================
-           CAUTION TAPE DIVIDER
-        ===================================================== */
+        /*CAUTION TAPE DIVIDER*/
         .caution-tape {
             width: 100%;
             height: 40px;
@@ -156,9 +154,7 @@
             height: 24px;
         }
 
-        /* =====================================================
-           ANIMATION STYLES
-        ===================================================== */
+        /*ANIMATION STYLES*/
         .word-wrapper {
             display: inline-block;
             overflow: hidden;
@@ -274,9 +270,7 @@
             width: 100%;
         }
 
-        /* =====================================================
-           BUTTONS
-        ===================================================== */
+        /*BUTTONS*/
         .btn {
             display: inline-flex;
             align-items: center;
@@ -358,9 +352,7 @@
             color: var(--color-text-light);
         }
 
-        /* =====================================================
-           NAVIGATION
-        ===================================================== */
+        /*NAVIGATION*/
         header {
             position: fixed;
             top: 0;
@@ -439,9 +431,7 @@
             width: 100%;
         }
 
-        /* =====================================================
-           HERO SECTION — light background
-        ===================================================== */
+        /*HERO SECTION — light background*/
         #home {
             min-height: 100vh;
             display: flex;
@@ -528,7 +518,7 @@
 
         .partner-logo {
             font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(0, 0, 0, 0.55);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -545,9 +535,7 @@
             letter-spacing: -0.5px;
         }
 
-        /* =====================================================
-           ABOUT SECTION — light background
-        ===================================================== */
+        /*ABOUT SECTION — light background*/
         #about {
             padding-top: 100px;
             padding-bottom: 100px;
@@ -585,9 +573,7 @@
             flex-shrink: 0;
         }
 
-        /* =====================================================
-           PRODUCT SECTION — GREEN BACKGROUND
-        ===================================================== */
+        /*PRODUCT SECTION — GREEN BACKGROUND*/
         #product {
             padding-top: 100px;
             padding-bottom: 100px;
@@ -734,19 +720,27 @@
             color: var(--color-text-primary);
         }
 
-        /* =====================================================
-           GALLERY SECTION — light background
-        ===================================================== */
+        /*GALLERY SECTION — light background*/
         #gallery {
             padding-top: 100px;
             padding-bottom: 100px;
-            background: var(--color-bg-secondary);
+            background: var(--color-green);
+        }
+
+        #gallery .section-label {
+            color: var(--color-yellow);
         }
 
         .gallery-header {
             text-align: center;
             margin-bottom: 60px;
+            color: var(--color-text-light);
         }
+
+        .gallery-header h2{
+            color: var(--color-text-light);
+        }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -789,9 +783,7 @@
         .gallery-item:hover .overlay-icon { opacity: 1; z-index: 3; }
         .gallery-item:hover::after { opacity: 1; }
 
-        /* =====================================================
-           CTA BANNER — yellow background
-        ===================================================== */
+        /*CTA BANNER — yellow background*/
         #cta-banner {
             padding: 80px 0;
             background: var(--color-yellow);
@@ -819,9 +811,7 @@
             color: var(--color-yellow);
         }
 
-        /* =====================================================
-           CONTACT SECTION — green background
-        ===================================================== */
+        /*CONTACT SECTION — green background*/
         #contact {
             padding-top: 100px;
             padding-bottom: 0;
@@ -926,12 +916,10 @@
             display: block !important;
         }
 
-        /* =====================================================
-           FOOTER — dark green
-        ===================================================== */
+        /*FOOTER*/
         footer {
-            background: var(--color-green-dark);
-            padding: 60px 0 30px;
+            background: var(--tape-black);
+            padding: 0px 0 40px;
             text-align: center;
         }
         .footer-links {
@@ -961,14 +949,16 @@
         .footer-socials a:hover { color: var(--color-yellow); }
         .copyright { font-size: 0.82rem; color: rgba(255,255,255,0.35); }
 
+        .copyright p {
+            color:rgba(255,255,255,0.45);
+        }
+
         /* Footer caution tape */
         .footer-tape {
             margin-bottom: 40px;
         }
 
-        /* =====================================================
-           LIGHTBOX
-        ===================================================== */
+        /*LIGHTBOX*/
         #prev-btn:hover, #next-btn:hover, #close-lightbox:hover {
             opacity: 1 !important;
             color: var(--color-yellow) !important;
@@ -982,9 +972,7 @@
         #prev-btn { left: 10px; }
         #next-btn { right: 10px; }
 
-        /* =====================================================
-           HERO MARQUEE
-        ===================================================== */
+        /*HERO MARQUEE*/
         .hero-marquee {
             margin-top: 30px;
             max-width: 500px;
@@ -1043,9 +1031,7 @@
             margin-bottom: 24px;
         }
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+        /*MOBILE view*/
         @media (max-width: 1024px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2.2rem; }
@@ -1120,9 +1106,7 @@
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
     <header>
-        <div class="nav-tape"></div>
         <div class="nav-inner">
             <div class="container">
                 <nav>
@@ -1151,9 +1135,7 @@
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
     <section id="home">
-        <!-- Caution tape band immediately under nav -->
         <div class="caution-tape hero-top-tape"></div>
 
         <div class="hero-body">
@@ -1204,62 +1186,9 @@
                 </div>
             </div>
         </div>
-
-        <!-- Caution tape at bottom of hero -->
         <div class="caution-tape"></div>
     </section>
 
-    <!-- ===== PARTNERS STRIP ===== -->
-    <div id="partners">
-        <div class="marquee-container green-marquee">
-            <div class="marquee-track">
-                <div class="partner-logo"><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
-                <div class="partner-logo"><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
-                <div class="partner-logo"><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
-                <div class="partner-logo"><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
-                <div class="partner-logo"><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
-                <div class="partner-logo"><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
-                <div class="partner-logo"><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
-                <div class="partner-logo"><a href="https://www.toyotamaterialhandling.com.au/" target="_blank" rel="noopener noreferrer"><span>Toyota Material Handling</span></a></div>
-                <div class="partner-logo"><a href="https://www.adaptalift.com.au/" target="_blank" rel="noopener noreferrer"><span>Adaptalift Group</span></a></div>
-                <div class="partner-logo"><a href="https://www.kennards.com.au/" target="_blank" rel="noopener noreferrer"><span>Kennards Hire</span></a></div>
-                <div class="partner-logo"><a href="https://abcocaravans.com.au/" target="_blank" rel="noopener noreferrer"><span>ABCO Caravans</span></a></div>
-                <div class="partner-logo"><a href="https://allliftforklifts.com.au/" target="_blank" rel="noopener noreferrer"><span>ALL lift Forklift</span></a></div>
-                <div class="partner-logo"><a href="https://www.coates.com.au/" target="_blank" rel="noopener noreferrer"><span>Coates Hire</span></a></div>
-                <div class="partner-logo"><a href="https://www.forkforce.com.au/" target="_blank" rel="noopener noreferrer"><span>Fork Force</span></a></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== ABOUT ===== -->
-    <section id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <span class="section-label">About Us</span>
-                    <h2 class="ventriloc-text-target">Engineering practical handling solutions for modern industry.</h2>
-                    <div class="heading-accent" style="margin-top:16px;"></div>
-                    <p class="ventriloc-anim">We are an Australian manufacturer specializing in forklift attachments designed for safe and efficient handling of trailers, campers, and vehicles.</p>
-                    <p class="ventriloc-anim">Our solutions are engineered to simplify material handling challenges across manufacturing facilities, logistics yards, and storage environments.</p>
-                </div>
-                <div class="about-cards">
-                    <div class="info-card lusion-card">
-                        <h4><i class="fa-solid fa-compass-drafting"></i> Our Approach</h4>
-                        <p>Practical engineering—designing robust, reliable products that integrate seamlessly into existing operations.</p>
-                    </div>
-                    <div class="info-card lusion-card" style="transition-delay: 0.1s;">
-                        <h4><i class="fa-solid fa-shield-halved"></i> Safety & Durability</h4>
-                        <p>Developed with a strong focus on safety compliance and built to withstand daily industrial use.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Caution tape between about and product -->
-    <div class="caution-tape"></div>
-
-    <!-- ===== PRODUCT ===== -->
     <section id="product">
         <div class="container">
             <div class="product-header">
@@ -1351,11 +1280,35 @@
             </div>
         </div>
     </section>
-
-    <!-- Caution tape between product and gallery -->
+    
     <div class="caution-tape"></div>
 
-    <!-- ===== GALLERY ===== -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-label">About Us</span>
+                    <h2 class="ventriloc-text-target">Engineering practical handling solutions for modern industry.</h2>
+                    <div class="heading-accent" style="margin-top:16px;"></div>
+                    <p class="ventriloc-anim">We are an Australian manufacturer specializing in forklift attachments designed for safe and efficient handling of trailers, campers, and vehicles.</p>
+                    <p class="ventriloc-anim">Our solutions are engineered to simplify material handling challenges across manufacturing facilities, logistics yards, and storage environments.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="info-card lusion-card">
+                        <h4><i class="fa-solid fa-compass-drafting"></i> Our Approach</h4>
+                        <p>Practical engineering—designing robust, reliable products that integrate seamlessly into existing operations.</p>
+                    </div>
+                    <div class="info-card lusion-card" style="transition-delay: 0.1s;">
+                        <h4><i class="fa-solid fa-shield-halved"></i> Safety & Durability</h4>
+                        <p>Developed with a strong focus on safety compliance and built to withstand daily industrial use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="caution-tape"></div>
+
     <section id="gallery">
         <div class="container">
             <div class="gallery-header">
@@ -1384,10 +1337,8 @@
         </div>
     </section>
 
-    <!-- Caution tape before CTA -->
     <div class="caution-tape"></div>
 
-    <!-- ===== CTA BANNER ===== -->
     <section id="cta-banner">
         <div class="container">
             <h2>Ready to optimize your fleet?</h2>
@@ -1396,10 +1347,8 @@
         </div>
     </section>
 
-    <!-- Caution tape before contact -->
     <div class="caution-tape"></div>
 
-    <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
             <div class="contact-grid">
@@ -1414,21 +1363,21 @@
                             <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
                             <div class="contact-text">
                                 <strong>Head Office</strong>
-                                <p>Federation Square, Melbourne VIC 3000, Australia</p>
+                                <p>Law Courts VIC 8010</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
                             <div class="contact-text">
                                 <strong>Phone</strong>
-                                <p>(03) 9655 1900</p>
+                                <p>0409 553 280</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
                             <div class="contact-text">
                                 <strong>Email</strong>
-                                <p>info@foxengineers.com.au</p>
+                                <p>charlie@foxengineers.com.au</p>
                             </div>
                         </div>
                     </div>
@@ -1470,9 +1419,9 @@
         <div class="full-width-map">
             <iframe src="https://maps.google.com/maps?q=Federation%20Square%2C%20Melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
         </div>
+        
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="caution-tape footer-tape"></div>
         <div class="container">
@@ -1496,7 +1445,6 @@
         </div>
     </footer>
 
-    <!-- LIGHTBOX -->
     <div id="lightbox" style="display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); align-items: center; justify-content: center;">
         <span id="close-lightbox" style="position: absolute; top: 30px; right: 40px; color: white; font-size: 40px; cursor: pointer; opacity: 0.7;">&times;</span>
         <button id="prev-btn" style="position: absolute; left: 30px; background: none; border: none; color: white; font-size: 3rem; cursor: pointer; opacity: 0.5;"><i class="fa-solid fa-chevron-left"></i></button>

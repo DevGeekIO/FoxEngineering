@@ -184,6 +184,8 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            position: relative;
+            z-index: 5;
             transform: scale(1.2);
             transition: transform 1.8s var(--easing-smooth);
         }
@@ -534,6 +536,62 @@
             font-weight: 700;
             letter-spacing: -0.5px;
         }
+
+        /*****new requested design changes******/
+        /* --- HERO TARGET IMAGE ELEMENTS --- */
+        /* Australian Flag Background for the right side */
+        .hero-flag-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            /* Replace with your actual Australian Flag asset */
+            background: url('./assets/icons/australian-flag-bg.png') left center/cover no-repeat; 
+            z-index: 0;
+            opacity: 0.9;
+        }
+
+        /* Green Tow Hitch Highlight Box */
+        .tow-hitch-box {
+            background-color: var(--color-green);
+            border: 3px solid var(--color-yellow);
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin: 20px 0 30px 0;
+            display: inline-block;
+            box-shadow: 0 8px 24px rgba(26, 92, 50, 0.15);
+        }
+        .tow-hitch-box p {
+            color: var(--color-white);
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0;
+            font-family: "acumin-pro", sans-serif;
+        }
+        .tow-hitch-box .highlight {
+            color: var(--color-yellow);
+        }
+
+        /* Australian Made Row */
+        .aus-made-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .aus-made-row img {
+            width: 90px;
+            height: auto;
+        }
+        .aus-made-row h2 {
+            font-size: 1.8rem;
+            color: var(--color-text-primary);
+            line-height: 1.2;
+            margin: 0;
+        }
+
 
         /*ABOUT SECTION — light background*/
         #about {
@@ -1159,16 +1217,29 @@
     <section id="home">
         <div class="caution-tape hero-top-tape"></div>
 
+        <div class="hero-flag-bg"></div>
+
         <div class="hero-body">
             <div class="container">
                 <div class="hero-layout">
                     <div class="hero-content">
-                        <span class="section-label ventriloc-anim">Patented Technology</span>
-                        <h1 class="ventriloc-text-target">Forklift Towing Attachment</h1>
+                        <span class="section-label ventriloc-anim" style="color: var(--color-text-primary);">Patented Technology</span>
+                        <h1 class="ventriloc-text-target" style="margin-bottom: 10px;">Forklift Towing Attachment</h1>
                         <div class="hero-accent-line"></div>
-                        <p class="hero-subtext ventriloc-anim">
+
+                        <div class="tow-hitch-box ventriloc-anim">
+                            <p>THE <span class="highlight">ONLY LEGAL<br>TOW HITCH</span> IN<br>AUSTRALIA THAT<br>CAN <span class="highlight">TOW 3,000 KG.</span></p>
+                        </div>
+
+                        <div class="aus-made-row ventriloc-anim">
+                            <img src="./assets/icons/aus-made-logo.png" alt="Australian Made">
+                            <h2>Australian Owned,<br>Australian Made</h2>
+                        </div>
+
+                        <p class="hero-subtext ventriloc-anim" style="margin-bottom: 30px;">
                             The preferred attachment for industrial towing solutions.
                         </p>
+
                         <div class="btn-group ventriloc-anim">
                             <a href="#product" class="btn">
                                 View Product <i class="fa-solid fa-arrow-right"></i>

@@ -435,7 +435,8 @@
 
         /*HERO SECTION — light background*/
         #home {
-            min-height: 100svh;
+            /*min-height: 100vh;*/
+            height: 100vh;
             display: flex;
             flex-direction: column;
             padding-top: 0;
@@ -1098,14 +1099,39 @@
 
         /*MOBILE view*/
         @media (max-width: 1024px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.2rem; }
-            .feature-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero-layout { gap: 30px; }
-            .feature-grid { grid-template-columns: repeat(2, 1fr); }
-            #home { height: auto; min-height: 100vh; }
-            .hero-body { padding: 40px 0; }
-            .tow-hitch-box { left: -5%; }
+            h1 { 
+                font-size: 3rem; 
+            }
+            h2 { 
+                font-size: 2.2rem; 
+            }
+            .feature-grid, .gallery-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            .hero-layout { 
+                gap: 30px; 
+            }
+            .feature-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            /*#home { height: 0auto; min-height: 100vh; }*/
+            #home { 
+                height: 70vh; 
+            }
+            .hero-body { 
+                padding: 40px 0; 
+            }
+            .tow-hitch-box {
+                position: relative;
+                left: 0;
+                bottom: 15px;
+                margin-top: -30px; /* Pull it up over the image slightly */
+                transform: scale(0.9);
+                width: 50%;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1401,7 +1427,7 @@
                 <div class="spec-grid">
                     <div class="spec-item">
                         <span>Load Capacity</span>
-                        <strong>Up to 5000 kg</strong>
+                        <strong>Up to 3000 kg</strong>
                     </div>
                     <div class="spec-item">
                         <span>Material</span>

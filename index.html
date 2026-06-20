@@ -1136,10 +1136,16 @@
         }
 
         @media (max-width: 768px) {
-            :root { --section-spacing: 70px; }
+            :root { 
+                --section-spacing: 70px; 
+            }
             
-            .nav-links { display: none; }
-            .mobile-toggle { display: block; }
+            .nav-links { 
+                display: none; 
+            }
+            .mobile-toggle { 
+                display: block; 
+            }
 
             .hero-top-tape {
                 margin-top: 58px; /* matches header height */
@@ -1190,13 +1196,18 @@
                 color: rgba(255,255,255,0.9);
             }
 
-            nav .btn-cta-nav { display: none; }
+            nav .btn-cta-nav { 
+                display: none; 
+            }
             
             .hero-layout, .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
             }
-            .feature-grid { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: 1fr; }
+            .feature-grid { 
+                grid-template-columns: 1fr; 
+            }
+            .gallery-grid { 
+                grid-template-columns: 1fr; }
             
             h1 { font-size: 2.5rem; }
             /*.hero-image-wrapper { height: 300px; order: -1; }*/
@@ -1579,26 +1590,29 @@
                 <div class="contact-form-block">
                     <div class="form-box">
                         <h3 style="margin-bottom: 25px; color: var(--color-yellow);">Request a Quotation</h3>
-                        <form>
+                        <form action="https://formsubmit.co/a95a1a1af3b160cc3dfd5413c96d51f5" method="POST">
+
+                            <input type="hidden" name="_subject" value="New Quote Request - Fox Engineers">
+
                             <div class="form-group">
                                 <i class="fa-solid fa-user"></i>
-                                <input type="text" placeholder="Your Name" required>
+                                <input type="text" name="name" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
                                 <i class="fa-solid fa-building"></i>
-                                <input type="text" placeholder="Company Name" required>
+                                <input type="text" name="company" placeholder="Company Name">
                             </div>
                             <div class="form-group">
                                 <i class="fa-solid fa-envelope"></i>
-                                <input type="email" placeholder="Email Address" required>
+                                <input type="email" name="email" placeholder="Email Address" required>
                             </div>
                             <div class="form-group">
                                 <i class="fa-solid fa-phone"></i>
-                                <input type="tel" placeholder="Phone Number" required>
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
                             </div>
                             <div class="form-group">
                                 <i class="fa-solid fa-message"></i>
-                                <textarea rows="5" placeholder="Details about your forklift model and requirements..." required></textarea>
+                                <textarea name="message" rows="5" placeholder="Details about your forklift model and requirements..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-yellow" style="width: 100%;">
                                 Submit Enquiry <i class="fa-solid fa-paper-plane"></i>

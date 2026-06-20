@@ -10,7 +10,6 @@
 
     <style>
 
-        /*Aptos local font*/
         @font-face {
             font-family: "Aptos";
             src: url("/assets/fonts/Aptos.woff2") format("woff2");
@@ -36,9 +35,7 @@
             font-family: inherit;
         }
 
-        /* --- VARIABLES & RESET --- */
         :root {
-            /* PRIMARY PALETTE — matching business card */
             --color-green:        #1a5c32;   
             --color-green-dark:   #0f3d20;   
             --color-green-light:  #236b3a;  
@@ -46,19 +43,16 @@
             --color-yellow-soft:  #fdd835;   
             --color-yellow-dark:  #c9a200;   
 
-            /* LIGHT THEME BASE */
             --color-bg-main:      #f2f0eb;   
             --color-bg-secondary: #e8e5de;   
             --color-bg-section:   #1a5c32;   
             --color-white:        #ffffff;
 
-            /* TEXT */
             --color-text-primary:   #0f3d20;   
             --color-text-light:     #ffffff;   
             --color-text-secondary: #3a5a45;   
             --color-text-muted:     #7a8a80;
 
-            /* CAUTION TAPE */
             --tape-yellow: #f5c400;
             --tape-black:  #1a1a1a;
             --tape-stripe-width: 28px;
@@ -94,7 +88,6 @@
             letter-spacing: -0.02em;
         }
 
-        /* On light sections: dark green headings */
         h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 24px; color: var(--color-text-primary); }
         h2 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--color-text-primary); }
         h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text-primary); }
@@ -104,7 +97,6 @@
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; }
 
-        /* --- UTILITIES --- */
         .container {
             max-width: 1280px;
             margin: 0 auto;
@@ -126,7 +118,6 @@
             font-weight: 700;
         }
 
-        /* On light bg, section-label goes green */
         .light-section .section-label,
         #home .section-label,
         #about .section-label,
@@ -135,7 +126,6 @@
             color: var(--color-green);
         }
 
-        /*CAUTION TAPE DIVIDER*/
         .caution-tape {
             width: 100%;
             height: 40px;
@@ -154,7 +144,6 @@
             height: 24px;
         }
 
-        /*ANIMATION STYLES*/
         .word-wrapper {
             display: inline-block;
             overflow: hidden;
@@ -195,7 +184,6 @@
             transform:translate(-15%, -30%) scale(2);
         }
 
-        /* Lusion Cards — light theme */
         .lusion-card {
             background: var(--color-white);
             padding: 40px 30px;
@@ -221,7 +209,6 @@
             transform: translateY(-5px);
         }
 
-        /* Green section cards */
         .green-section .lusion-card {
             background: var(--color-green-light);
             border-color: rgba(255,255,255,0.15);
@@ -256,7 +243,6 @@
             margin-bottom: 0;
         }
 
-        /* On green bg, icons go yellow */
         .green-section .lusion-card i {
             color: var(--color-yellow);
         }
@@ -273,7 +259,6 @@
             width: 100%;
         }
 
-        /*BUTTONS*/
         .btn {
             display: inline-flex;
             align-items: center;
@@ -310,7 +295,6 @@
             color: #fff;
         }
 
-        /* Yellow CTA button (on green sections) */
         .btn-yellow {
             background: var(--color-yellow);
             color: var(--color-green-dark);
@@ -347,7 +331,6 @@
             border-color: var(--color-green-dark);
         }
 
-        /* MOBILE MENU */
         .mobile-toggle {
             display: none;
             font-size: 1.5rem;
@@ -355,7 +338,6 @@
             color: var(--color-text-light);
         }
 
-        /*NAVIGATION*/
         header {
             position: fixed;
             top: 0;
@@ -364,7 +346,6 @@
             background: var(--color-green);
         }
 
-        /* Caution tape strip at very top of nav */
         .nav-tape {
             width: 100%;
             height: 8px;
@@ -434,7 +415,6 @@
             width: 100%;
         }
 
-        /*HERO SECTION — light background*/
         #home {
             /*min-height: 100vh;*/
             height: 100vh;
@@ -447,7 +427,6 @@
             background: var(--color-bg-main);
         }
 
-        /* Caution tape top border after nav */
         .hero-top-tape {
             margin-top: 66px; /* matches header height */
         }
@@ -474,7 +453,6 @@
             z-index: 2; 
         }
 
-        /* Scaled down text to fit screen */
         #home h1 { font-size: 3.2rem; line-height: 1.05; }
 
         .hero-subtext {
@@ -485,7 +463,6 @@
         }
         .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
 
-        /* Yellow accent line under h1 */
         .hero-accent-line {
             width: 60px;
             height: 4px;
@@ -494,7 +471,6 @@
             border-radius: 2px;
         }
 
-        /* --- PARTNERS MARQUEE --- */
         #partners {
             padding: 0;
             overflow: hidden;
@@ -545,9 +521,6 @@
             letter-spacing: -0.5px;
         }
 
-        /*****new requested design changes******/
-        /* --- HERO TARGET IMAGE ELEMENTS --- */
-        /* Australian Flag Background for the right side */
         .hero-flag-bg {
             position: absolute;
             top: 0;
@@ -559,11 +532,10 @@
             opacity: 0.9;
         }
 
-        /* Green Tow Hitch Highlight Box */
         .tow-hitch-box {
             position: absolute;
-            bottom: 12%;       /* Lifted slightly to align better with the back tires */
-            right: 4%;         /* Anchored to the right side instead of the left */
+            bottom: 12%;       
+            right: 4%;         
             z-index: 10;
             background-color: var(--color-green);
             border: 3px solid var(--color-yellow);
@@ -583,7 +555,6 @@
             color: var(--color-yellow);
         }
 
-        /* Australian Made Row */
         .aus-made-row {
             display: inline-flex;
             align-items: center;
@@ -601,8 +572,6 @@
             margin: 0;
         }
 
-
-        /*ABOUT SECTION — light background*/
         #about {
             padding-top: 100px;
             padding-bottom: 100px;
@@ -640,7 +609,6 @@
             flex-shrink: 0;
         }
 
-        /*PRODUCT SECTION — GREEN BACKGROUND*/
         #product {
             padding-top: 100px;
             padding-bottom: 100px;
@@ -669,7 +637,6 @@
             margin-bottom: 40px;
         }
 
-        /* Feature cards on green */
         #product .lusion-card {
             background: rgba(255,255,255,0.08);
             border: 2px solid rgba(255,255,255,0.15);
@@ -687,7 +654,6 @@
             color: var(--color-yellow);
         }
 
-        /* Spec cards on green */
         #product .spec-item {
             background: rgba(255,255,255,0.08);
             border: 2px solid rgba(255,255,255,0.2);
@@ -702,7 +668,6 @@
             color: var(--color-text-light);
         }
 
-        /* Video Area */
         .video-placeholder {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -749,7 +714,6 @@
             100% { box-shadow: 0 0 0 0 rgba(245,196,0,0); }
         }
 
-        /* Spec grid */
         .spec-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -787,7 +751,6 @@
             color: var(--color-text-primary);
         }
 
-        /*GALLERY SECTION — light background*/
         #gallery {
             padding-top: 100px;
             padding-bottom: 100px;
@@ -850,7 +813,6 @@
         .gallery-item:hover .overlay-icon { opacity: 1; z-index: 3; }
         .gallery-item:hover::after { opacity: 1; }
 
-        /*CTA BANNER — yellow background*/
         #cta-banner {
             padding: 80px 0;
             background: var(--color-yellow);
@@ -878,7 +840,6 @@
             color: var(--color-yellow);
         }
 
-        /*CONTACT SECTION — green background*/
         #contact {
             padding-top: 100px;
             padding-bottom: 0;
@@ -925,7 +886,6 @@
             margin-bottom: 0;
         }
 
-        /* Full Width Map */
         .full-width-map {
             width: 100%;
             height: 420px;
@@ -938,7 +898,6 @@
             filter: grayscale(30%) contrast(90%);
         }
         
-        /* Request Quote Form */
         .form-box {
             background: rgba(255,255,255,0.08);
             padding: 40px;
@@ -972,7 +931,6 @@
             background: rgba(255,255,255,0.14);
         }
 
-        /* VIDEO PLAYER */
         .video-placeholder.is-playing {
             background: none;
         }
@@ -983,7 +941,6 @@
             display: block !important;
         }
 
-        /*FOOTER*/
         footer {
             background: var(--tape-black);
             padding: 0px 0 40px;
@@ -1020,12 +977,10 @@
             color:rgba(255,255,255,0.45);
         }
 
-        /* Footer caution tape */
         .footer-tape {
             margin-bottom: 40px;
         }
 
-        /*LIGHTBOX*/
         #prev-btn:hover, #next-btn:hover, #close-lightbox:hover {
             opacity: 1 !important;
             color: var(--color-yellow) !important;
@@ -1039,13 +994,11 @@
         #prev-btn { left: 10px; }
         #next-btn { right: 10px; }
 
-        /*HERO MARQUEE*/
         .hero-marquee {
             margin-top: 20px;
             max-width: 500px;
         }
 
-        /* use bg-main color for fade on hero (light) */
         .marquee-container::before,
         .marquee-container::after {
             content: "";
@@ -1065,7 +1018,6 @@
             background: linear-gradient(to left, var(--color-bg-main), transparent);
         }
 
-        /* On green bg marquee */
         .green-marquee .marquee-container::before {
             background: linear-gradient(to right, var(--color-green), transparent);
         }
@@ -1082,13 +1034,11 @@
             color: var(--color-text-secondary);
         }
 
-        /* Ventriloc text override for light sections */
         .ventriloc-text-target,
         .ventriloc-text-target * {
             font-family: "acumin-pro", sans-serif !important;
         }
 
-        /* Yellow underline accent for section headings */
         .heading-accent {
             display: inline-block;
             width: 48px;
@@ -1098,7 +1048,6 @@
             margin-bottom: 24px;
         }
 
-        /*MOBILE view*/
         @media (max-width: 1024px) {
             h1 { 
                 font-size: 3rem; 
@@ -1115,7 +1064,6 @@
             .feature-grid { 
                 grid-template-columns: repeat(2, 1fr); 
             }
-            /*#home { height: 0auto; min-height: 100vh; }*/
             #home { 
                 height: 70vh; 
             }
@@ -1126,7 +1074,7 @@
                 position: relative;
                 left: 0;
                 bottom: 15px;
-                margin-top: -30px; /* Pull it up over the image slightly */
+                margin-top: -30px; 
                 transform: scale(0.9);
                 width: 50%;
                 text-align: center;
@@ -1148,7 +1096,7 @@
             }
 
             .hero-top-tape {
-                margin-top: 58px; /* matches header height */
+                margin-top: 58px; 
             }
 
             #home,
@@ -1210,7 +1158,6 @@
                 grid-template-columns: 1fr; }
             
             h1 { font-size: 2.5rem; }
-            /*.hero-image-wrapper { height: 300px; order: -1; }*/
             .form-box { padding: 25px; }
             .full-width-map { height: 300px; }
 
@@ -1236,7 +1183,7 @@
             #home h1 { font-size: 2.5rem; }
             
             .aus-made-row { width: 100%; justify-content: center; padding: 12px; }
-            .hero-flag-bg { width: 100%; opacity: 0.1; } /* Full width fade on mobile */
+            .hero-flag-bg { width: 100%; opacity: 0.1; }
             
             .hero-image-wrapper { 
                 order: -1; 
@@ -1262,12 +1209,11 @@
                 margin: 0;
             }
             
-            /* Reposition Green Box nicely for Mobile */
             .tow-hitch-box {
                 position: relative;
                 left: 0;
                 bottom: 15px;
-                margin-top: -30px; /* Pull it up over the image slightly */
+                margin-top: -30px; 
                 transform: scale(0.9);
                 width: 90%;
                 text-align: center;
@@ -1423,7 +1369,6 @@
                 </div>
             </div>
 
-            <!-- Hidden video card -->
             <div class="lusion-card" style="width: 100%;">
                 <div class="video-section-header" style="text-align: center; margin-bottom: 20px;">
                     <span class="section-label">See it in action</span>
@@ -1667,7 +1612,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             
-            // --- 1. Ventriloc Text Splitter ---
+            //Ventriloc Text Splitter
             const textTargets = document.querySelectorAll('.ventriloc-text-target');
             
             textTargets.forEach(el => {
@@ -1688,7 +1633,7 @@
                 });
             });
 
-            // --- 2. Intersection Observer ---
+            //Intersection Observer
             const observerOptions = {
                 threshold: 0.15,
                 rootMargin: "0px 0px -50px 0px"
@@ -1734,7 +1679,7 @@
                 observer.observe(el);
             });
 
-            // Video player
+            //Video player
             const playBtn = document.querySelector("#playBtn");
             const videoContainer = document.querySelector("#videoContainer");
             const localVideo = document.querySelector("#localVideo");
@@ -1748,7 +1693,7 @@
                 });
             }
 
-            // Lightbox
+            //Lightbox
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             const closeBtn = document.getElementById('close-lightbox');
@@ -1793,7 +1738,7 @@
                 }
             });
 
-            // Navbar scroll
+            //Navbar scroll
             const navbar = document.querySelector("header");
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 30) {
@@ -1803,7 +1748,7 @@
                 }
             });
 
-            // Mobile menu
+            //Mobile menu
             const mobileBtn = document.querySelector('.mobile-toggle');
             const navLinks = document.querySelector('.nav-links');
 
